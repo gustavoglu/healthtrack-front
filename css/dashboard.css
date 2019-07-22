@@ -6,18 +6,18 @@
 
 
 sidebar{
+
     display: block;
     height: 100%;
     width: 300px;
-    background-color: black; 
+    background-color: white; 
+  
+    
 }
 
-main{
-    display: block;
-    height: 100%;
-    background-color: green;
-    width: calc(100% - 300px);
-}
+
+
+
 
 .dash header{
     display:flex;
@@ -25,6 +25,48 @@ main{
     align-items: center;
     justify-content: space-between;
     height: 70px;
-    background-color: white;
+    background-color: rgb(220,20,60);
     padding: 0 30px;
 }
+
+.side-menu-itens li{
+    padding: 15px;
+    border: 0.5px ;
+    color: black;
+
+}
+
+
+ sidebar .side-menu{
+     text-align: center;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    width: 300px;
+    background-color:rgb(220,20,60);
+    height : 70px;
+   
+}
+
+sidebar .side-menu .side-title{
+    color: white;
+    display: block;
+   
+ 
+    
+} 
+
+
+header .dash-title{
+    color: white;
+    
+}
+
+header .btn-logout{
+    width: 100px;
+    color:rgb(220,20,60);
+    background-color:white
+}
+

@@ -1,11 +1,12 @@
-$(document).load(()=>{
-    alert('load')
-})
 
-document.getElementById('buttonRegister')
-.addEventListener('click',()=>{
-    document.getElementById('buttonRegister').style.visibility = 'collapse'
-    
-    alert('teste');
-    document.location.href="views/register.html";
+
+let registerButton = document.getElementById('registerButton');
+let loginButton = document.getElementById('loginButton');
+registerButton.addEventListener('click', () => {
+
+    document.location.href = "views/register.html";
+})
+loginButton.addEventListener('click', () => {
+
+    document.location.href = "views/dashboard.html";
 })

@@ -1,30 +1,93 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="stylesheet" href="../css/all.css">
-    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
-    <title>Registro</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="../css/all.css">
+        <link rel="stylesheet"
+            href="../plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
+        <title>Registro</title>
+    </head>
 
-<body>
-    <div class="dash">
-        <sidebar>
-            <div class="side-title"></div>
-        </sidebar>
-        <main>
-            <header></header>
-            <div class="content">
+    <body>
+        <div class="dash">
+            <sidebar>
+                <div class="side-menu">
+                    <div class="h2 side-title">
+                        Health Track
+                    </div>
+                </div>
+                <div class="side-menu-itens">
+                    <ul>
+                        <li>
 
-            </div>
-        </main>
-    </div>
-</body>
-<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="../plugins/fontawesome/js/all.min.js"></script>
+                            <a href="#">
+                                <i class="fas fa-columns"></i>
+                                Dashboard</a>
+                        </li>
+                        <li>
 
+                            <a href="#">
+                                <i class="far fa-user"></i>
+                                Perfil
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-ruler-vertical"></i>
+                                Peso / Altura</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-apple-alt"></i>
+                                Alimentos
+                            </a>
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+                                <i class="fas fa-heartbeat"></i>
+                                Pressão Arterial</a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-running"></i>
+                                Atividades Físicas</a>
+                        </li>
+                        <li>
+                            <a id="imcButton" href="#" view="atividades" >
+                                <i  class="fas
+                                    fa-balance-scale-right"></i>
+                                IMC</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </sidebar>
+            <main>
+                <header>
+                    <div class="h3 dash-title">Dashboard</div>
+                    <button type="button" class="btn btn btn-logout">Sair</button>
+                </header>
+                <div class="content">
+                    <div id="ajax-content">
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugins/fontawesome/js/all.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script>
+        let imcButton = document.getElementById('imcButton');
+     
+        fetchContent(imcButton);
+    </script>
 </html>
