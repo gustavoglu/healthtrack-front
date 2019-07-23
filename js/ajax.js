@@ -7,10 +7,8 @@ function fetchContent(el) {
     //let folder = el.getAttribute('folder');
      fetch(`./${view}.html`)
          .then(r => {
-             alert('teste')
              return r.text();
          }).then(html => {
-             console.log(html)
              content.innerHTML = html;
          }
          );
