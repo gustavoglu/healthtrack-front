@@ -1,24 +1,42 @@
-
- body .principal{
+body .principal {
     display: flex;
-    flex-direction: "row";
-    
+    flex-direction: row;
     width: 100%;
     height: 100%;
-    background-color: red;
-
 }
- 
-.principal-itens{
-    display: block;
-    flex-direction: column;
-    width: 100%;
-    background-color: blue;
+
+.title-content{
+    padding: 20px;
+}
+.principal-itens {
+    padding: 15px;
+    width: 70%;
+    height: 100%;
     margin: 5px red;
-    justify-content: space-around;
+}
+
+.principal-edit{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     
 }
 
+.form-peso {
+
+    background-color: blue;
+}
+
+.btnFechar {
+    align-self: flex-end;
+    
+}
 /*
 .edit{
     display: flex;

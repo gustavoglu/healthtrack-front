@@ -14,94 +14,54 @@
 <body>
 
 
-    <h1 class="title-content">Atividades</h1>
+    <h1 class="title-content">Peso</h1>
     <div class="principal">
 
         <div class="principal-itens">
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Calorias Gastas</th>
-                        <th scope="col">Descrição</th>
                         <th scope="col">Data</th>
+                        <th scope="col">Peso</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Corrida</td>
-                        <td>80</td>
-                        <td>Corrida da manhã</td>
                         <th scope="row">25/07/2019</th>
+                        <td>82kg</td>
                         <td>
                             <i class="fas fa-edit"></i>
                             <i class="fas fa-trash-alt"></i>
 
                         </td>
+
                     </tr>
-
                     <tr>
-                        <td>Caminhada</td>
-                        <td>40</td>
-                        <td>Caminhada no trabalho</td>
-                        <th scope="row">25/07/2019</th>
-
-                        <td>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Corrida</td>
-                        <td>50</td>
-                        <td>Corrida a noite</td>
-                        <th scope="row">25/07/2019</th>
-
+                        <th scope="row">26/07/2019</th>
+                        <td>83kg</td>
                         <td>
                             <i class="fas fa-edit"></i>
                             <i class="fas fa-trash-alt"></i>
 
                         </td>
-
                     </tr>
                 </tbody>
             </table>
 
         </div>
         <div class="principal-edit">
-            <h5 >Inserir/Editar</h5>
+                <h5 >Inserir/Editar</h5>
             <div class="form_peso">
                 <form>
-                    <div class="tipo">
-
-                        <div class="form-group">
-                            <label >Tipo</label>
-                            <select class="form-control" placeholder="Tipo">
-                                <option>Corrida</option>
-                                <option>Caminhada</option>
-                            </select>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="calorias">Calorias Gastas</label>
-                            <input type="number" class="form-control" id="calorias" placeholder="Informe as calorias">
-                        </div>
-
-                    </div>
-
-                    <div class="form-group">
-                        <label for="descricao">Descrição</label>
-                        <input type="text" class="form-control" id="descricao" placeholder="Descroção">
-                    </div>
-
                     <div class="form-group">
                         <label for="data">Data</label>
                         <input type="date" class="form-control" id="data" placeholder="Informe uma Data">
                     </div>
-
+                    <div class="form-group">
+                        <label for="kg">Kg</label>
+                        <input type="number" class="form-control" id="kg" placeholder="Informe seu peso">
+                    </div>
                     <div class="actions">
                         <button id="confirmBtn" type="button" class="btn btn-primary">Salvar</button>
                         <button id="cancelBtn" type="button" class="btn btn btnFechar" class="fechar">
