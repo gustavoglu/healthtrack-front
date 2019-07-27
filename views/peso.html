@@ -1,84 +1,95 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="stylesheet" href="../css/all.css">
-    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
-    <title>Registro</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="../css/all.css">
+        <link rel="stylesheet"
+            href="../plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
+        <title>Registro</title>
+    </head>
 
-<body>
+    <body>
 
 
-    <h1 class="title-content">Peso</h1>
-    <div class="principal">
+        <h1 class="title-content">Peso</h1>
+        <div class="principal">
 
-        <div class="principal-itens">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Data</th>
-                        <th scope="col">Peso</th>
-                        <th scope="col">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">25/07/2019</th>
-                        <td>82kg</td>
-                        <td>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
+            <div class="principal-itens">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Data</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">25/07/2019</th>
+                            <td>82kg</td>
+                            <td>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-trash-alt"></i>
 
-                        </td>
+                            </td>
 
-                    </tr>
-                    <tr>
-                        <th scope="row">26/07/2019</th>
-                        <td>83kg</td>
-                        <td>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
+                        </tr>
+                        <tr>
+                            <th scope="row">26/07/2019</th>
+                            <td>83kg</td>
+                            <td>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-trash-alt"></i>
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-        </div>
-        <div class="principal-edit">
-                <h5 >Inserir/Editar</h5>
-            <div class="form_peso">
-                <form>
-                    <div class="form-group">
-                        <label for="data">Data</label>
-                        <input type="date" class="form-control" id="data" placeholder="Informe uma Data">
-                    </div>
-                    <div class="form-group">
-                        <label for="kg">Kg</label>
-                        <input type="number" class="form-control" id="kg" placeholder="Informe seu peso">
-                    </div>
-                    <div class="actions">
-                        <button id="confirmBtn" type="button" class="btn btn-primary">Salvar</button>
-                        <button id="cancelBtn" type="button" class="btn btn btnFechar" class="fechar">
-                            Fechar
-                        </button>
-                    </div>
-                </form>
             </div>
+            <div class="principal-edit">
+                <h5>Inserir/Editar</h5>
+                <div class="form_peso">
+                    <form id="peso-form">
+                        <div class="form-group">
+                            <label for="data">Data</label>
+                            <input type="date" name="data" class="form-control" id="data"
+                                placeholder="Informe uma Data">
+                        </div>
+                        <div class="form-group">
+                            <label for="kg">Kg</label>
+                            <input type="number" name="peso"
+                                class="form-control" id="kg"
+                                placeholder="Informe seu peso">
+                        </div>
+                        <div class="actions">
+                            <button type="submit" id="confirmBtn" type="button"
+                                class="btn btn-primary">Salvar</button>
+                            <button id="cancelBtn" type="button" class="btn btn
+                                btnFechar" class="fechar">
+                                Fechar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
 
-    </div>
-
-</body>
-<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="../plugins/fontawesome/js/all.min.js"></script>
-<script src="../js/ajax.js"></script>
-<script>
+    </body>
+    <script src="../plugins/jquery/jquery.js"></script>
+    <script src="../plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="../plugins/jquery-validation/dist/additional-methods.min.js"></script>
+    <script
+        src="../plugins/jquery-validation/dist//localization//messages_pt_BR.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugins/fontawesome/js/all.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script>
 </script>
 
 </html>

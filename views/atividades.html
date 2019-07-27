@@ -1,124 +1,139 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="stylesheet" href="../css/all.css">
-    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
-    <title>Registro</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="../css/all.css">
+        <link rel="stylesheet"
+            href="../plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
+        <title>Registro</title>
+    </head>
 
-<body>
-
-
-    <h1 class="title-content">Atividades</h1>
-    <div class="principal">
-
-        <div class="principal-itens">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Calorias Gastas</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Corrida</td>
-                        <td>80</td>
-                        <td>Corrida da manhã</td>
-                        <th scope="row">25/07/2019</th>
-                        <td>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
-
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Caminhada</td>
-                        <td>40</td>
-                        <td>Caminhada no trabalho</td>
-                        <th scope="row">25/07/2019</th>
-
-                        <td>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Corrida</td>
-                        <td>50</td>
-                        <td>Corrida a noite</td>
-                        <th scope="row">25/07/2019</th>
-
-                        <td>
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
-
-                        </td>
-
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
-        <div class="principal-edit">
-            <h5 >Inserir/Editar</h5>
-            <div class="form_peso">
-                <form>
-                    <div class="tipo">
-
-                        <div class="form-group">
-                            <label >Tipo</label>
-                            <select class="form-control" placeholder="Tipo">
-                                <option>Corrida</option>
-                                <option>Caminhada</option>
-                            </select>
-                        </div>
+    <body>
 
 
-                        <div class="form-group">
-                            <label for="calorias">Calorias Gastas</label>
-                            <input type="number" class="form-control" id="calorias" placeholder="Informe as calorias">
-                        </div>
+        <h1 class="title-content">Atividades</h1>
+        <div class="principal">
 
-                    </div>
+            <div class="principal-itens">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Calorias Gastas</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Corrida</td>
+                            <td>80</td>
+                            <td>Corrida da manhã</td>
+                            <th scope="row">25/07/2019</th>
+                            <td>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-trash-alt"></i>
 
-                    <div class="form-group">
-                        <label for="descricao">Descrição</label>
-                        <input type="text" class="form-control" id="descricao" placeholder="Descrição">
-                    </div>
+                            </td>
+                        </tr>
 
-                    <div class="form-group">
-                        <label for="data">Data</label>
-                        <input type="date" class="form-control" id="data" placeholder="Informe uma Data">
-                    </div>
+                        <tr>
+                            <td>Caminhada</td>
+                            <td>40</td>
+                            <td>Caminhada no trabalho</td>
+                            <th scope="row">25/07/2019</th>
 
-                    <div class="actions">
-                        <button id="confirmBtn" type="button" class="btn btn-primary">Salvar</button>
-                        <button id="cancelBtn" type="button" class="btn btn btnFechar" class="fechar">
-                            Fechar
-                        </button>
-                    </div>
-                </form>
+                            <td>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-trash-alt"></i>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Corrida</td>
+                            <td>50</td>
+                            <td>Corrida a noite</td>
+                            <th scope="row">25/07/2019</th>
+
+                            <td>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-trash-alt"></i>
+
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
+            <div class="principal-edit">
+                <h5>Inserir/Editar</h5>
+                <div class="form_peso">
+                    <form id="atividades-form">
+                        <div class="tipo" >
+
+                            <div class="form-group">
+                                <label>Tipo</label>
+                                <select class="form-control" placeholder="Tipo" name="tipo">
+                                    <option>Corrida</option>
+                                    <option>Caminhada</option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="calorias">Calorias Gastas</label>
+                                <input type="number" class="form-control"
+                                    id="calorias" placeholder="Informe as
+                                    calorias"
+                                    name="calorias">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <input type="text" class="form-control"
+                                id="descricao" placeholder="Descrição"
+                                name="descricao">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="data">Data</label>
+                            <input type="date" class="form-control" id="data"
+                                placeholder="Informe uma Data"
+                                name="data">
+                        </div>
+
+                        <div class="actions">
+                            <button type="submit" id="confirmBtn" type="button" class="btn
+                                btn-primary">Salvar</button>
+                            <button id="cancelBtn" type="button" class="btn btn
+                                btnFechar" class="fechar">
+                                Fechar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
 
-    </div>
-
-</body>
-<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="../plugins/fontawesome/js/all.min.js"></script>
-<script src="../js/ajax.js"></script>
-<script>
+    </body>
+    <script src="../plugins/jquery/jquery.js"></script>
+    <script src="../plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="../plugins/jquery-validation/dist/additional-methods.min.js"></script>
+    <script
+        src="../plugins/jquery-validation/dist//localization//messages_pt_BR.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugins/fontawesome/js/all.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script>
 </script>
 
 </html>

@@ -3,7 +3,6 @@ let content = document.getElementById('ajax-content')
 function fetchContent(el) {
 
     let view = el.getAttribute('view');
-    console.log(`./views/${view}.html`);
     //let folder = el.getAttribute('folder');
      fetch(`./${view}.html`)
          .then(r => {
@@ -11,5 +10,13 @@ function fetchContent(el) {
          }).then(html => {
              content.innerHTML = html;
          }
-         );
+         ).then(()=>{
+             const script = document.createElement('script');
+             script.async = true;
+             script.src = `/js/${view}.js`;
+             document.body.appendChild(script);
+
+         })
+         
+         ;
 }

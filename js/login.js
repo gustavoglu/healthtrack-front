@@ -6,7 +6,7 @@ registerButton.addEventListener('click', () => {
 
     document.location.href = "views/register.html";
 })
-loginButton.addEventListener('click', () => {
+// loginButton.addEventListener('click', () => {
 
-    document.location.href = "views/dashboard.html";
-})
+//     document.location.href = "views/dashboard.html";
+// })

@@ -1,55 +1,116 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="stylesheet" href="../css/all.css">
-    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
-    <title>Registro</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="../css/all.css">
+        <link rel="stylesheet"
+            href="../plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
+        <title>Registro</title>
+    </head>
 
-<body>
-    <div class="register-parent">
-        <img class="logo" src="https://png.icons8.com/color/1600/heart-health">
-        
-        <form>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
-            </div>
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite seu Nome">
-            </div>
-            <div class="form-group">
-                <label for="idade">Idade</label>
-                <input type="number" class="form-control" id="idade" placeholder="Digite sua Idade">
-            </div>
-            <div class="form-group">
-            
-                <select  class="form-control" id="senha" placeholder="Digite uma senha">
-                    <option>Masculino</option>
-                    <option>Feminino</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="senha">Senha</label>
-                <input type="password" class="form-control" id="senha" placeholder="Digite uma senha">
-            </div>
-            <div class="form-group">
-                <label for="confirmacaoSenha">Confirmação Senha</label>
-                <input type="password" class="form-control" id="confirmacaoSenha" placeholder="Dgite novamente a senha">
-            </div>
+    <body>
+        <div class="register-parent">
+            <img class="logo"
+                src="https://png.icons8.com/color/1600/heart-health">
+
+            <form id="registro-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control"
+                        id="email" placeholder="Digite seu e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" class="form-control"
+                        id="nome" placeholder="Digite seu Nome">
+                </div>
+                <div class="form-group">
+                    <label for="idade">Idade</label>
+                    <input type="number" name="idade" class="form-control"
+                        id="idade" placeholder="Digite sua Idade">
+                </div>
+                <div class="form-group">
+                    <label for="idade">Gênero</label>
+                    <select class="form-control" id="senha" name="genero"
+                        placeholder="Digite uma senha">
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" class="form-control"
+                        id="senha" placeholder="Digite uma senha">
+                </div>
+                <div class="form-group">
+                    <label for="confirmacaoSenha">Confirmação Senha</label>
+                    <input type="password" name="confirmacaoSenha"
+                        class="form-control" id="confirmacaoSenha"
+                        placeholder="Dgite novamente a senha">
+                </div>
 
 
-            <button type="submit" class="btn btn-primary button-register">Registrar-se</button>
-        </form>
-    </div>
-</body>
-<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="../plugins/fontawesome/js/all.min.js"></script>
+                <button type="submit" class="btn btn-primary button-register">Registrar-se</button>
+            </form>
+        </div>
+    </body>
+    <script src="../plugins/jquery/jquery.js"></script>
+    <script src="../plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="../plugins/jquery-validation/dist/additional-methods.min.js"></script>
+    <script
+        src="../plugins/jquery-validation/dist//localization//messages_pt_BR.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugins/fontawesome/js/all.min.js"></script>
+    <script>
+    
+    $(function(){
 
+
+        jQuery.validator.addMethod("confirmacaoSenhaValidation", (value,element)=>{
+            let pass = $('#senha').val();
+            let confirmacaoPass = $('#confirmacaoSenha').val();
+
+            return pass == confirmacaoPass
+
+        },"As senhas precisam ser iguais");
+
+$("#registro-form").submit(function(event){
+  
+    event.preventDefault();
+    
+}).validate({
+    rules:{
+        email:{
+            required:true,
+        },
+        nome:{
+            required:true,
+        },
+        idade:{
+            required:true,
+            number:true
+        },
+        genero:{
+            required:true,
+        },
+        senha:{
+            required:true,
+        },
+        confirmacaoSenha:{
+            required:true,
+            confirmacaoSenhaValidation:true
+        }
+      
+    },
+    submitHandler:function(form){
+        location.href = '/views/dashboard.html'
+    }
+})    
+})
+
+</script>
 </html>

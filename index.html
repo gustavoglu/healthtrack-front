@@ -1,56 +1,93 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
-    <title>Health Track</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="eidth=device=width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+        <title>Health Track</title>
+    </head>
 
-<body>
-    <div class="login">
-        <div class="login-form">
+    <body>
+        <div class="login">
+            <div class="login-form">
 
-            <div class="login-form-wrapper">
-                <h2 class="logo-title">Health Track</h1>
-                <h4 class="login-title">Login</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                            placeholder="E-mail">
+                <div class="login-form-wrapper">
+                    <h2 class="logo-title">Health Track</h1>
+                    <h4 class="login-title">Login</h2>
+                    <form id="form-login">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email"
+                                class="form-control" id="email"
+                                aria-describedby="emailHelp"
+                                placeholder="E-mail">
 
-                    </div>
-                    <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input type="password" class="form-control" id="senha" placeholder="Senha">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="melembre">
-                        <label class="form-check-label" for="melembre">Me lembre</label>
-                    </div>
-                    <button id="loginButton" type="button" class="login-button btn btn-primary">Login</button>
-                    <button class="btn btn" type="button" id="registerButton">
-                       Cadastrar-se
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" name="senha"
+                                class="form-control"
+                                id="senha" placeholder="Senha">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input"
+                                id="melembre">
+                            <label class="form-check-label" for="melembre">Me
+                                lembre</label>
+                        </div>
+                        <button id="loginButton" 
+                            class="login-button btn btn-primary" type="submit">Login</button>
+                        <button class="btn btn" type="button"
+                            id="registerButton">
+                            Cadastrar-se
 
-                    </button>
-                </form>
+                        </button>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="banner-login">
-            <img id="imgBanner" class="img-banner" src="https://png.icons8.com/color/1600/heart-health">
-        </div>
+            <div class="banner-login">
+                <img id="imgBanner" class="img-banner"
+                    src="https://png.icons8.com/color/1600/heart-health">
+            </div>
 
-    </div>
-</body>
-<script src="plugins/jquery/jquery.js"></script>
-<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="plugins/fontawesome/js/all.min.js"></script>
-<script src="js/login.js">
+        </div>
+    </body>
+    <script src="plugins/jquery/jquery.js"></script>
+    <script src="plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="plugins/jquery-validation/dist/additional-methods.min.js"></script>
+    <script
+        src="plugins/jquery-validation/dist//localization//messages_pt_BR.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/fontawesome/js/all.min.js"></script>
+    <script src="js/login.js">
 </script>
+    <script>
+        $(function(){
+            
+            $("#form-login").submit(function(event){
+            
+                event.preventDefault();
 
+            }).validate({
+                rules:{
+                    email:{
+                        required:true,
+                    
+                    },
+                     senha:{
+                         required:true,
+                    },
+                
+                },
+                submitHandler:function(form){
+              
+                    document.location.href = "views/dashboard.html";
+                }
+            })    
+        });
+        </script>
 </html>
